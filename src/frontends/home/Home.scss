@@ -1,0 +1,1805 @@
+//Home page
+.travel_home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+//Header
+.travel__home-header-wrapper{
+    z-index: 99900;
+    min-width: 100%;
+    .travel__home-header{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--black-75);
+        position: relative;
+        .travel__home-header-info{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 99910;
+            h1.travel__home-header-info-title{
+                text-align: center;
+
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            p.travel__home-header-info-text{
+                text-align: center;
+                
+                transform: translateY(100px);
+                opacity: 0;
+            }
+        }
+
+        .travel__home-header-image{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+//Booking information
+.travel__home-booking{
+    width: 100%;
+    position: relative;
+    transform: translateY(0);
+    opacity: 0;
+    z-index: 99999;
+    padding-top: 2rem;
+    li{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .travel__home-booking_nav{
+            width: 100%;
+            ul.travel__home-booking_nav-list{
+                margin-bottom: 0;
+                border-radius: 25px 25px 0 0;
+                width: 279px;
+                height: 100px;
+                background: var(--white-primary);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 14px;
+                li.travel__home-booking_nav-list_item{
+                    a{
+                        border-radius: 25px;
+                        width: 121px;
+                        height: 66px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+
+                        font-family: var(--font-family);
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: var(--black-primary);
+                        svg{
+                            width: 30px;
+                            color: var(--blue-primary);
+                        }
+                    }
+                    a.active{
+                        background-color: var(--active-color);
+                    }
+
+                    a:hover{
+                        background-color: var(--blue-secondary);
+                    }
+                }
+            }
+        }
+
+        .travel__home-booking_info{
+            width: 100%;
+            border-radius: 0 50px 50px 50px;
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+            background: var(--white-primary);
+
+            display: grid;
+            grid-template-columns: 4fr 5fr 1.25fr;
+            gap: 2rem;
+            padding: 3rem;
+            .travel__home-booking_info-item{
+                border: 2px solid rgba(172, 172, 172, 0.5);
+                background: var(--white-primary);
+                border-radius: 25px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem;
+                height: 154px;
+                .travel__home-booking_info-item-detail{
+                    p.text-muted{
+                        font-family: var(--font-family);
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: var(--black-75);
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                            svg{
+                                margin-left: 4px;
+                                width: 27px;
+                                height: 25px;
+                                color: var(--blue-primary);
+                            }
+                        
+                    }
+
+                    h3.title{
+                        font-family: var(--font-family);
+                        font-weight: 500;
+                        font-size: 24px;
+                        color: var(--black-primary);
+                    }
+
+                }
+
+                .travel__home-booking_info-item-detail.return{
+                    p.text-muted{
+                        svg{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                .travel__home-booking_info-item-type{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1px dashed var(--black-75);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                
+                
+            }
+
+            .travel__home-booking_info-item.search{
+                background-color: var(--blue-primary);
+                border-radius: 65px;
+                border: none;
+                max-width: 154px;
+                height: 154px;
+                cursor: pointer;
+                svg{
+                    width: 50;
+                    height: 55;
+                    color: var(--white-primary);
+                }
+            }
+
+            .travel__home-booking_info-item.search:hover{
+                background-color: var(--blue-secondary);
+            }
+        }
+    }
+}
+
+//Special upcoming offers
+.travel__home-special-upcoming{
+    width: 100%;
+    padding: 1rem 0 5rem 0;
+    li{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: unset;
+    }
+
+    ul{
+        padding-left: 0;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .travel__home-special-upcoming_title{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            h1.title{
+                text-align: center;
+                color: var(--black-primary);
+            }
+
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        .travel__home-special-upcoming_nav{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            ul.travel__home-special-upcoming_nav-list{
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                border-radius: 10px;
+                padding: 1rem;
+                box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.05);
+                background: var(--white-primary);
+
+                li.travel__home-special-upcoming_nav-list_item{
+                    a{
+                        display: block;
+                        font-family: var(--font-family);
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: var(--black-75);
+                        padding: 10px 15px;
+                        border-radius: 10px;
+                    }
+
+                    a.active{
+                        color: var(--white-primary);
+                        background: var(--blue-primary);
+                    }
+
+                    a:hover{
+                        background: var(--blue-secondary);
+                    }
+                }
+            }
+
+            transform: translateY(100px);
+            opacity: 0;
+        }
+
+        .travel__home-special-upcoming_body{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+            transform: translateY(200px);
+            opacity: 0;
+        }
+
+        .travel__home-special-upcoming_card{
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.05);
+            background: var(--white-primary);
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            .card-image{
+                display: grid;
+                grid-template-columns: 90% 10%;
+                gap: 0.75rem;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                .card-image-box{
+                    border-radius: 50px;
+                    max-width: 400px;
+                    width: 100%;
+                    height: 273px;
+                    background-color: var(--blue-primary);
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                p.card-image-text-muted{
+                    width: 100%;
+                    text-transform: uppercase;
+                    text-wrap: nowrap;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    letter-spacing: 5px;
+                    transform: rotate(90deg);
+                    margin-bottom: 0;
+                }
+            }
+
+            .card-info{
+                padding: 1rem 0.5rem 0.5rem 0.5rem;
+                width: 100%;
+                .card-info-meta{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.5rem;
+                    p.card-info-meta-category{
+                        font-family: var(--font-family);
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: #f178b6;
+                        background: #fcddec;
+                        border-radius: 100px;
+                        padding: 0.25rem 1rem;
+                    }
+
+                    p.card-info-meta-category.active{
+                        color: #7879f1;
+                        background: #f1f1fd;
+                    }
+
+                    p.card-info-meta-text{
+                        font-family: var(--font-family);
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: var(--black-75);
+                        padding: 0.25rem 1rem;
+                    }
+                }
+
+                .card-info-title{
+                    h1{
+                        font-family: var(--font-family);
+                        font-weight: 600;
+                        font-size: 24px;
+                        color: var(--black-primary);
+                    }
+                }
+
+                .card-info-end{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding-top: 1.25rem;
+                    p.card-info-end-price{
+                        margin-bottom: 0;
+                        font-size: 18px;
+                        color: var(--black-75);
+                        strong{
+                            font-family: var(--font-family);
+                            font-weight: 500;
+                            font-size: 24px;
+                            color: var(--black-primary);
+                        }
+                    }
+
+                    button.card-info-button{
+                        font-family: var(--font-family);
+                        font-weight: 500;
+                        font-size: 14px;
+                        padding: 0.25rem 1rem;
+                        color: var(--blue-primary);
+                        background: #f2f6ff;
+                        border-radius: 10px;
+                        border: none;
+                    }
+
+                    button.card-info-button:hover{
+                        background: var(--blue-secondary);
+                    }
+                }
+            }
+        }
+    
+    }
+    
+}
+
+//Special upcoming offers
+.travel__home-promotion{
+     width: 100%;
+     padding: 1rem 0 5rem 0;
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    
+        .travel__home-promotion_left{
+            padding: 5rem;
+            .travel__home-promotion_left-image-box{
+                position: relative;
+               
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 75px;
+                }
+                .travel__home-promotion_left-image-box_article{
+                    position: absolute;
+                    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+                    background: var(--white-primary);
+                    border-radius: 35px;
+                    padding: 0.5rem 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    h3.title{
+                        font-family: var(--font-family);
+                        font-weight: 600;
+                        font-size: 36px;
+                        color: var(--blue-primary);
+                        margin-bottom: 0;
+                    }
+                    p.text{
+                        font-family: var(--font-family);
+                        font-weight: 300;
+                        font-size: 18px;
+                        color: var(--black-primary);
+                        margin-bottom: 0;
+                    }
+                }
+
+                .travel__home-promotion_left-image-box_article:nth-child(2){
+                    top: 50%;
+                    left: 0;
+                    transform: translateX(-5rem);
+                }
+
+                .travel__home-promotion_left-image-box_article:nth-child(3){
+                    top: 20%;
+                    right: 0;
+                    transform: translateX(5rem);
+                }
+
+                .travel__home-promotion_left-image-box_article:nth-child(4){
+                    top: 70%;
+                    right: 0;
+                    transform: translateX(5rem);
+                }
+            }
+
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+
+        .travel__home-promotion_right{
+            display: flex;
+            flex-direction: column;
+            h1.title{
+                color: var(--black-primary);
+                font-size: 60px !important;
+            }
+
+            p.text{
+                color: var(--black-75);
+                margin-bottom: 2rem;
+            }
+
+            button.travel__home-promotion_button{
+                display: block;
+                border-radius: 10px;
+                width: 179px;
+                height: 75px;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 20px;
+                color: var(--white-primary);
+                background: var(--blue-primary);
+                border: none;
+            }
+
+            button.travel__home-promotion_button:hover{
+                background: var(--blue-secondary);
+            }
+
+            transform: translateX(100px);
+            opacity: 0;
+        }
+    }
+}
+
+//Recommended Destination
+.travel__home-recommended{
+    width: 100%;
+    padding: 1rem 0 5rem 0;
+    li{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: unset;
+    }
+
+    ul{
+        padding-left: 0;
+    }
+   
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+        .travel__home-recommended_title{
+            width: 100%;
+            margin-bottom: 2rem;
+            h1.title{
+                text-align: center;
+                color: var(--black-primary);
+            }
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        .travel__home-recommended_nav{
+            width: 100%;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ul.travel__home-recommended_nav-list{
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                padding: 1rem;
+                margin-bottom: 0;
+                li.travel__home-recommended_nav-list_item{
+                    a{
+                        display: block;
+                        font-family: var(--font-family);
+                        font-weight: 600;
+                        font-size: 18px;
+                        color: var(--black-75);
+                        padding: 0.5rem 1rem;
+                        border-radius: 0.5rem;
+                    }
+
+                    a.active{
+                        color: var(--blue-primary);
+                        background-color: var(--white-primary);
+                    }
+
+                    a:hover{
+                        background-color: var(--white-light);
+                    }
+                }
+
+            }
+
+            transform: translateY(100px);
+            opacity: 0;
+        }
+
+        .travel__home-recommended_body{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            .travel__home-recommended_card{
+                box-shadow: 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+                background: var(--white-primary);
+                border-radius: 25px;
+                padding: 0.75rem;
+                cursor: pointer;
+                .card-image{
+                    position: relative;
+                    .card-image-box{
+                        width: 100%;
+                        height: 200px;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    
+                    .card-image-rating{
+                        position: absolute;
+                        top: 16px;
+                        right: 16px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        width: 55px;
+                        height: 20px;
+                        border-radius: 25px;
+                        background: var(--white-primary);
+                        svg{
+                            color: yellow;
+                            height: 15px;
+                            width: 15px;
+                            margin-right: 0.25rem;
+                        }
+                        span{
+                            font-family: var(--font-family);
+                            font-weight: 500;
+                            font-size: 12px;
+                            color: var(--black-primary);
+                        }
+                    }
+                }
+
+                .card-info{
+                    padding: 1rem 1rem 0;
+                    .card-info-title{
+                        display: block;
+                        h3{
+                            font-family: var(--font-family);
+                            font-weight: 600;
+                            font-size: 18px;
+                            color: var(--black-primary);  
+                        }
+                    }
+
+                    .card-info-destination{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        svg{
+                            color: #f58686;
+                            margin-right: 0.25rem;
+                        }
+
+                        p.text{
+                            margin-bottom: 0;
+                            font-family: var(--font-family);
+                            font-weight: 500;
+                            font-size: 14px;
+                            color: var(--black-75);
+                        }
+                    }
+                }
+
+            }
+            .travel__home-recommended_card:hover{
+                box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.4) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            }
+
+            transform: translateY(100px);
+            opacity: 0;
+        }
+    }
+}
+
+//Customer Response
+.travel__home-customer-response{
+    width: 100%;
+    padding: 5rem 0 5rem 0;
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: unset;
+    }
+    ul{
+        padding-left: 0;
+    }
+    p{
+        padding: 0;
+        margin-bottom: 0;
+    }
+    //Customer Card
+    .travel__home-customer-response_card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        width: 580px;
+        min-height: 410px;
+        padding: 50px 0;
+        background-color: var(--white-primary);
+        position: relative;
+        .travel__home-customer-response_card-icon{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+            z-index: 100;
+            svg{
+                width: 180px;
+                height: 150px;
+                color: rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .card-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            z-index: 200;
+            p.card-info_customer-comment{
+                text-align: center;
+                color: var(--black-primary);
+            }
+
+            a.card-info_customer-name{
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 209%;
+                text-align: center;
+                color: var(--blue-primary);
+            }
+
+            p.card-info_customer-field{
+                text-align: center;
+                color: var(--black-75);
+            }
+        }
+
+        .card-image{
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .card-image-box{
+                width: 100px;
+                height: 100px;
+                border-radius: 100%;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .card-image-rating{
+                border-radius: 25px;
+                width: 45px;
+                height: 20px;    
+                background: var(--white-primary);
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 12px;
+                color: var(--black-primary);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 10%;
+                left: 70%;
+                svg{
+                    width: 15px;
+                    height: 15px;
+                    color: yellow;
+                }
+            }
+        }
+    }
+
+    .container{
+        position: relative;
+        height: 100%;
+    }
+    
+    .swiper {
+        width: 100%;
+        height: 100%;
+        padding: 2rem 0 8rem 0;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-pagination{
+        transform: translateY(-250%);
+    }
+
+    .travel__home_swiper-button{
+        top: 100%;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        border: 1px solid var(--blue-primary);
+        color: var(--blue-primary);
+        transform: translateY(-100%);
+    }
+
+    .travel__home_swiper-button:hover{
+        background-color: var(--white-light);
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after{
+        font-size: 24px;
+    }
+    .travel__home_swiper-button.next{
+        right: 45%;
+    }
+    .travel__home_swiper-button.prev{
+        left: 45%;
+    }
+
+    transform: translateY(200px);
+    opacity: 0;
+}
+
+//Footer
+.travel__home-footer{
+    width: 100%;
+    padding: 5rem 0 5rem 0;
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .travel__home-footer-image{
+            width: 100%;
+            height: 100%;
+            background-color: var(--black-75);
+            border-radius: 100px;
+            max-width: 1180px;
+            height: 500px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .travel__home-footer-info{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 2rem;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          
+            h1.travel__home-footer-title{
+                text-align: center;
+            }
+
+            a.travel__home-footer-button{
+                border-radius: 25px;
+                width: 220px;
+                height: 80px;
+                background-color: var(--white-primary);
+                border:none;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p.text{
+                    color: var(--blue-primary);
+                    margin-bottom: 0;
+                }
+            }
+
+            a.travel__home-footer-button:hover{
+                background-color: var(--white-light);
+            }
+        }
+    }
+
+    transform: translateY(200px);
+    opacity: 0;
+}
+
+
+@media screen and (max-width: 992px){ 
+
+    //Booking information
+     .travel__home-booking{
+        padding: 2rem 0;
+        .container{
+            .travel__home-booking_info{
+            
+                display: grid;
+                grid-template-columns: 100% !important;
+                flex-direction: column;
+                gap:  3rem !important;
+                padding: 3rem !important;
+                .travel__home-booking_info-item{
+                    height: 200px;
+                    .travel__home-booking_info-item-type{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 1px dashed var(--black-75);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                }
+
+                .travel__home-booking_info-item.where{
+                    max-width: 80%;
+                }
+
+                .travel__home-booking_info-item.search{
+                    min-width: 100% !important;
+                    height: fit-content !important;
+                }
+
+            }
+        }
+    }
+
+    //Special upcoming offers
+    .travel__home-special-upcoming{
+        .container{
+            width: 100%;
+            .travel__home-special-upcoming_body{
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .travel__home-special-upcoming_card:nth-child(3){
+                grid-column: 1/3 ;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding-left: 0.5rem;
+                .card-image{
+                    display: grid;
+                    grid-template-columns: 5% 95%;
+                    .card-image-box{
+                        order: 2;
+                        min-width: 60%;
+                    }
+
+                    p.card-image-text-muted{
+                        position: relative;
+                        order: 1;
+                        margin-right: 1rem;
+                        transform: rotate(-90deg);
+                    }
+                }
+
+                .card-info{
+                     padding: 1rem;
+                     height: 100%;
+                     width: 70%;
+                     margin-left: 1rem;
+                }
+            }
+        
+        }
+      
+    }
+    
+    //Special upcoming offers
+    .travel__home-promotion{
+        .container{
+            grid-template-columns: 1fr;
+            .travel__home-promotion_left{
+                padding: 0 5rem;
+            }
+            .travel__home-promotion_right{
+                padding: 2rem;
+            }
+        }
+    }
+
+     //Recommended Destination
+     .travel__home-recommended{
+        .container{
+            .travel__home-recommended_body{
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+        }
+    }
+
+    //Customer Response
+    .travel__home-customer-response{
+     
+        .travel__home_swiper-button.next{
+            right: 40%;
+        }
+        .travel__home_swiper-button.prev{
+            left: 40%;
+        }
+        
+    }
+
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media screen and (max-width: 768px) { 
+    
+    //Header
+    .travel__home-header-wrapper{
+            .travel__home-header{
+                min-height: 100vh;
+                .travel__home-header-info{
+                    padding: 0 1rem;
+                    h1.travel__home-header-info-title{
+                        margin-bottom: 2rem;
+                        font-weight: 500;
+                        font-size: 42px;
+                    }
+                    p.travel__home-header-info-text{
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                    }
+                }
+
+            }
+    }
+    
+    //Booking information
+    .travel__home-booking{
+        .container{
+            .travel__home-booking_info{
+            
+                display: grid;
+                grid-template-columns: 100% !important;
+                flex-direction: column;
+                gap:  2rem !important;
+                padding: 2rem !important;
+
+                .travel__home-booking_info-item{
+                    height: fit-content !important;
+
+                    .travel__home-booking_info-item-type{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 1px dashed var(--black-75);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                }
+
+                .travel__home-booking_info-item.where{
+                    max-width: 80%;
+                }
+
+            }
+        }
+    }
+
+    //Special upcoming offers
+    .travel__home-special-upcoming{
+        
+        .container{
+            .travel__home-special-upcoming_body{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 2rem; 
+            }
+
+            .travel__home-special-upcoming_card{
+                grid-column: 1/3 ;
+                .card-image{
+                    .card-image-box{  
+                        max-width: 600px;
+                    }
+                }
+                .card-info{
+                    padding: 1rem;
+                  
+                    height: 100%;
+                }
+            }
+
+            .travel__home-special-upcoming_card:nth-child(3){
+                grid-column: 1/3 ;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                .card-image{
+                    display: grid;
+                    grid-template-columns: 85% 15%;
+                    .card-image-box{
+                        order: 1;
+                    }
+
+                    p.card-image-text-muted{
+                        order: 2;
+                    }
+                }
+
+                .card-info{
+                     padding: 1rem;
+                   
+                     height: 100%;
+                }
+            }
+
+        }
+      
+    }
+
+    //Special upcoming offers
+    .travel__home-promotion{
+        .container{
+            grid-template-columns: 1fr;
+            .travel__home-promotion_left{
+                padding: 0 4rem;
+                .travel__home-promotion_left-image-box{
+                    img{
+                        border-radius:40px;
+                    }
+                    .travel__home-promotion_left-image-box_article{
+                        border-radius: 25px;
+                        padding: 0.5rem 1rem;
+                        h3.title{
+                            font-weight: 600;
+                            font-size: 24px;
+                        }
+                        p.text{                          
+                            font-weight: 300;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .travel__home-promotion_left-image-box_article:nth-child(2){
+                        transform: translateX(-4rem);
+                    }
+
+                    .travel__home-promotion_left-image-box_article:nth-child(3){
+                        transform: translateX(4rem);
+                    }
+
+                    .travel__home-promotion_left-image-box_article:nth-child(4){
+                        transform: translateX(4rem);
+                    }
+                }
+            }
+
+            .travel__home-promotion_right{
+                align-items: center;
+                padding: 0;
+                h1.title{
+                    font-weight: 600;
+                    font-size: 48px;
+                    margin-bottom: 1.5rem;
+                    text-align: center;
+                }
+
+                p.text{
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 180%;
+                    margin-bottom: 1.5rem;
+                    text-align: center;
+                }
+
+                .travel__home-promotion_button{
+                    width: 150px;
+                    height: 55px;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    //Recommended Destination
+    .travel__home-recommended{
+        .container{
+            .travel__home-recommended_body{
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+    }
+
+    //Customer Response
+    .travel__home-customer-response{
+        width: 100%;
+        padding: 5rem 0 5rem 0;
+    
+        //Customer Card
+        .travel__home-customer-response_card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            width: 580px;
+            min-height: 410px;
+            padding: 50px 0;
+            background: var(--white-primary);
+            position: relative;
+            .travel__home-customer-response_card-icon{
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                padding: 0.5rem 0;
+                z-index: 100;
+                svg{
+                    width: 180px;
+                    height: 150px;
+                    color: var(--black-75);
+                }
+            }
+
+            .card-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                z-index: 200;
+                p.card-info_customer-comment{
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 209%;
+                    text-align: center;
+                    color: var(--black-primary);
+                }
+
+                a.card-info_customer-name{
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 209%;
+                    text-align: center;
+                    color: var(--blue-primary);
+                }
+
+                p.card-info_customer-field{
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 209%;
+                    text-align: center;
+                    color: var(--black-75);
+                }
+            }
+
+            .card-image{
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .card-image-box{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .card-image-rating{
+                    border-radius: 25px;
+                    width: 45px;
+                    height: 20px;    
+                    background: var(--white-primary);
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 12px;
+                    color: var(--black-primary);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 10%;
+                    left: 70%;
+                    svg{
+                        width: 15px;
+                        height: 15px;
+                        color: yellow;
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination{
+            transform: translateY(-200%);
+        }
+
+        .travel__home_swiper-button{
+            top: 100%;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--blue-primary);
+            color: var(--blue-primary);
+            transform: translateY(-100%);
+        }
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after{
+            font-size: 24px;
+        }
+        .travel__home_swiper-button.next{
+            right: 30%;
+        }
+        .travel__home_swiper-button.prev{
+            left: 30%;
+        }
+        
+    }
+
+    
+}
+
+// applies to x-small devices (portrait phones, less than 576px)
+@media screen and (max-width: 575.98px) { 
+
+    //Header
+    .travel__home-header-wrapper{
+        .travel__home-header{
+            min-height: 100vh;
+            .travel__home-header-info{
+                h1.travel__home-header-info-title{
+                    margin-bottom: 1.5rem;
+                    font-size: 40px;
+                }
+            }
+
+        }
+    }
+    
+    //Booking information
+    .travel__home-booking{
+        transform: translateY(-120px) !important;
+        .container{
+            .travel__home-booking_nav{
+                ul.travel__home-booking_nav-list{
+                    margin-bottom: 0;
+                    border-radius: 15px 15px 0 0;
+                    width: 100% !important;
+                    height: 100px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    padding: 14px;
+                    li.travel__home-booking_nav-list_item{
+                       a{
+                            border-radius:  10px !important;
+                            width: 110px !important;
+                            height: 55px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            font-family: var(--font-family);
+                            font-weight: 400;
+                            font-size: 18px;
+                            color: var(--black-primary);
+                            svg{
+                                width: 30px;
+                                color: var(--blue-primary);
+                            }
+                       }
+                       a.active{
+                            background-color: rgba(62, 134, 245, 0.2);
+                       }
+                    }
+                }
+            }
+
+            .travel__home-booking_info{
+              
+                border-radius: 0 0px 15px 15px !important;
+                display: grid;
+                grid-template-columns: 100% ;
+                gap: 1rem;
+                padding: 1rem;
+                .travel__home-booking_info-item{
+                    border-radius: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+                    padding: 0.5rem;
+                    height: fit-content !important;
+
+                    .travel__home-booking_info-item-detail{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+                        p.text-muted{
+                            font-weight: 300;
+                            font-size: 14px;
+                            display: flex;
+                            flex-direction: row;
+                            margin-bottom: 0;
+                            div.icon{
+                              
+                                svg{
+                                    width: 18;
+                                    height: 14px;
+                                    
+                                }
+                            }
+                        }
+
+                        h3.title{
+                            font-weight: 400;
+                            font-size: 18px;
+                            margin-bottom: 0;
+                        }
+
+                    }
+       
+                }
+
+                .travel__home-booking_info-item.where{
+                    max-width: 100%;
+                }
+
+            
+            }
+        }
+    }
+
+    //Special upcoming offers
+    .travel__home-special-upcoming{
+        .container{
+            .travel__home-special-upcoming_nav{
+                ul.travel__home-special-upcoming_nav-list{
+                    gap: 0.5rem;
+                    border-radius: 10px;
+                    padding: 0.5rem;
+                    li.travel__home-special-upcoming_nav-list_item{
+                        a{
+                            font-weight: 500;
+                            font-size: 14px;
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                        }
+
+                    }
+                }
+            }
+            .travel__home-special-upcoming_body{
+                gap: 2rem;
+            }
+
+            .travel__home-special-upcoming_card{
+                border-radius: 25px;
+                padding: 1rem;
+                .card-image{
+                    .card-image-box{
+                        border-radius: 25px;
+                        max-width: 400px;
+                    }
+
+                    p.card-image-text-muted{
+                        letter-spacing: 3px;
+                    }
+                }
+
+                .card-info{
+                    padding: 0.5rem;
+                    .card-info-meta{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 1rem;
+                        p.card-info-meta-category{
+                            font-weight: 400;
+                            font-size: 10px;
+                            border-radius: 25px;
+                            padding: 0.25rem 0.5rem;
+                        }
+
+                        p.card-info-meta-text{
+                            font-weight: 400;
+                            font-size: 10px;
+                            padding: 0.25rem 0.5rem;
+                        }
+                    }
+
+                    .card-info-title{
+                        h1{
+                            font-weight: 400;
+                            font-size: 18px;
+                        }
+                    }
+
+                    .card-info-end{
+                        padding-top: 1rem;
+                        p.card-info-end-price{
+                            font-size: 14px;
+                            strong{
+                                font-weight: 400;
+                                font-size: 18px;
+                            }
+                        }
+
+                        button.card-info-button{
+                            font-weight: 400;
+                            font-size: 14px;
+                            padding: 0.25rem 0.5rem;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+     //Special upcoming offers
+    .travel__home-promotion{
+        .container{
+            grid-template-columns: 1fr;
+            .travel__home-promotion_left{
+                padding: 0 2rem;
+                .travel__home-promotion_left-image-box{
+                    img{
+                        border-radius: 2rem;
+                    }
+                    .travel__home-promotion_left-image-box_article{
+                        border-radius: 1rem;
+                        padding: 0.25rem 0.5rem;
+                        h3.title{
+                            font-weight: 500;
+                            font-size: 18px;
+                        }
+                        p.text{                          
+                            font-weight: 400;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .travel__home-promotion_left-image-box_article:nth-child(2){
+                        transform: translateX(-2rem);
+                    }
+
+                    .travel__home-promotion_left-image-box_article:nth-child(3){
+                        transform: translateX(2rem);
+                    }
+
+                    .travel__home-promotion_left-image-box_article:nth-child(4){
+                        transform: translateX(2rem);
+                    }
+                }
+            }
+
+            .travel__home-promotion_right{
+                align-items: center;
+                padding: 0;
+                h1.title{
+                    margin-bottom: 1.25rem;
+                }
+
+                p.text{
+                    margin-bottom: 1.5rem;
+                }
+
+                .travel__home-promotion_button{
+                    width: auto;
+                    height: auto;
+                    padding: 0.75rem 1rem;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+     //Recommended Destination
+     .travel__home-recommended{
+        .container{
+            .travel__home-recommended_nav{
+                margin-bottom: 1.5rem;
+                ul.travel__home-recommended_nav-list{
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+                    padding: 0.5rem;
+                    li.travel__home-recommended_nav-list_item{
+                        a{
+                            font-weight: 500;
+                            font-size: 16px;
+                            padding: 0.25rem 0.75rem;
+                            border-radius: 0.25rem;
+                        }
+                    }
+
+                }
+            }
+
+            .travel__home-recommended_body{
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1.5rem;
+                .travel__home-recommended_card{
+                    border-radius: 20px;
+                    padding: 0.5rem;
+                    .card-image{
+                        .card-image-box{
+                            border-radius: 16px;
+                        }
+                        
+                        .card-image-rating{
+                            position: absolute;
+                            top: 16px;
+                            right: 16px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            width: 55px;
+                            height: 20px;
+                            border-radius: 25px;
+                            background: var(--white-primary);
+                            svg{
+                                color: yellow;
+                                height: 15px;
+                                width: 15px;
+                                margin-right: 0.25rem;
+                            }
+                            span{
+                                font-family: var(--font-family);
+                                font-weight: 500;
+                                font-size: 12px;
+                                color: var(--black-primary);
+                            }
+                        }
+                    }
+
+                    .card-info{
+                        .card-info-title{
+                            display: block;
+                            h3{
+                                font-weight: 500;
+                                font-size: 16px; 
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    //Customer Response
+    .travel__home-customer-response{
+        //Customer Card
+        .travel__home-customer-response_card{
+           
+            border-radius: 30px;
+            width: 100%;
+           
+            .travel__home-customer-response_card-icon{
+                padding: 0.5rem 0;
+               
+                svg{
+                    width: 150px;
+                    height: 120px;
+                    color: var(--black-75);
+                }
+            }
+
+            .card-info{
+                padding: 0.5rem;
+                p.card-info_customer-comment{
+                }
+
+                a.card-info_customer-name{
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 200%;
+                }
+
+                p.card-info_customer-field{
+                }
+            }
+
+        }
+
+        .travel__home_swiper-button{
+            top: 100%;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            border: 1px solid var(--blue-primary);
+            color: var(--blue-primary);
+            transform: translateY(-100%);
+        }
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after{
+            font-size: 20px;
+        }
+        .travel__home_swiper-button.next{
+            right: 15%;
+        }
+        .travel__home_swiper-button.prev{
+            left: 15%;
+        }
+        
+    }
+
+    //Footer
+    .travel__home-footer{
+        .container{
+            .travel__home-footer-image{
+                border-radius: 50px; 
+            }
+
+            .travel__home-footer-info{
+                button.travel__home-footer-button{
+                    border-radius: 16px;
+                    width: 180px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+

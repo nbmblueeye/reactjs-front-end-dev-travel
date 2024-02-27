@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --link-hover-color: aqua;
+    --dark-blur-color: #adacac;
+    --hover-bg-color: #cac8c8;
+    --side-bar-bg-color: #f5f5f5;
+    --active-color:rgba(62, 134, 245, 0.2);
+
+    --white-primary: #fff;
+    --white-secondary: #f3f3f3;
+    --white-light:#e6e6e6;
+
+    --black-primary: #000;
+    --blue-primary:rgba(62, 134, 245, 0.8);
+    --blue-secondary:rgba(62, 134, 245, 0.5);
+
+    --black-75: rgba(0, 0, 0, 0.5);
+
+    --font-family: "Poppins", sans-serif;
+    --second-family: "Jost", sans-serif;
+}
+
+html, body{
+    min-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: var(--white-secondary) !important;
+    scroll-behavior: smooth;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+ul{
+    padding-left: 0;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gradient__text-color{
+    /* ff 3.6+ */
+    background: -moz-linear-gradient(90deg, rgba(139, 192, 74, 1) 0%, rgba(238, 130, 238, 1) 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background: -webkit-linear-gradient(90deg, rgba(139, 192, 74, 1) 0%, rgba(238, 130, 238, 1) 100%);
+
+    /* opera 11.10+ */
+    background: -o-linear-gradient(90deg, rgba(139, 192, 74, 1) 0%, rgba(238, 130, 238, 1) 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EE82EE', endColorstr='#8BC04A', GradientType=0 );
+
+    /* ie 10+ */
+    background: -ms-linear-gradient(90deg, rgba(139, 192, 74, 1) 0%, rgba(238, 130, 238, 1) 100%);
+
+    /* global 94%+ browsers support */
+    background: linear-gradient(90deg, rgba(139, 192, 74, 1) 0%, rgba(238, 130, 238, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+  
+  h1.title{
+    margin-bottom: 3rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 64px;
+    word-wrap: break-word;
+  }
+
+  p.text{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 200%;
+  }
+
+  p.text-muted{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 200%;
+  }
+
+  a.link{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 992px){
+    h1.title{
+      margin-bottom: 2rem;
+      font-weight: 600;
+      font-size: 56px;
+    }
+  
+    p.text{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 180%;
+    }
+
+    p.text-muted{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 180%;
+    }
+
+    a.link{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 180%;
+    }
+  
+  }
+
+  @media screen and (max-width: 768px){
+    h1.title{
+      margin-bottom: 2rem;
+      font-weight: 600;
+      font-size: 48px;
+    }
+  
+    p.text{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 160%;
+    }
+
+    p.text-muted{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 160%;
+    }
+
+    a.link{
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: 575.98px){
+    h1.title{
+      margin-bottom: 2rem;
+      font-weight: 600;
+      font-size: 40px;
+    }
+  
+    p.text{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+    }
+
+    p.text-muted{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    a.link{
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+
+
